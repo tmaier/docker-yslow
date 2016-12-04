@@ -1,4 +1,4 @@
-FROM wernight/phantomjs:2
+FROM wernight/phantomjs:1
 MAINTAINER Tobias L. Maier <tobias.maier@baucloud.com>
 
 USER root
