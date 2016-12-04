@@ -1,6 +1,8 @@
 FROM wernight/phantomjs:2
 MAINTAINER Tobias L. Maier <tobias.maier@baucloud.com>
 
+USER root
+
 RUN apt-get update \
   && apt-get install -y \
     curl \
@@ -12,6 +14,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /
+
+USER phantomjs
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["--threshold", "'{\"overall\": \"B\", \"ycdn\": 65}'"]
