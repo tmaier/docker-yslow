@@ -14,4 +14,4 @@ RUN apt-get update \
 COPY entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["--help"]
+CMD ["--threshold", "'{\"overall\": \"B\", \"ycdn\": 65}'"]
