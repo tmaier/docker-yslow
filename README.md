@@ -15,7 +15,7 @@ $ docker run tmaier/yslow --cdns "fonts.googleapis.com" www.example.com
 ```
 
 ```bash
-$ docker run tmaier/yslow:latest phantomjs yslow.js --info grade --format tap --cdns "fonts.googleapis.com" www.example.com
+$ docker run tmaier/yslow:latest phantomjs yslow.js --info grade --format tap --cdns "fonts.googleapis.com" --threshold '{"overall": "B", "ycdn": 65}' www.example.com
 ```
 
 ## Author
